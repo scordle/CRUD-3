@@ -10,7 +10,7 @@ require "../common.php";
 try {
   $connection = new PDO($dsn, $username, $password, $options);
 
-  $sql = "SELECT * FROM users";
+  $sql = "SELECT * FROM person";
 
   $statement = $connection->prepare($sql);
   $statement->execute();
@@ -30,8 +30,8 @@ try {
             <th>#</th>
             <th>First Name</th>
             <th>Last Name</th>
-            <th>Email Address</th>
-            <th>Age</th>
+            <!-- <th>Email Address</th>
+            <th>Age</th> -->
             <th>Location</th>
             <th>Date</th>
             <th>Edit</th>
@@ -43,8 +43,8 @@ try {
             <td><?php echo escape($row["id"]); ?></td>
             <td><?php echo escape($row["firstname"]); ?></td>
             <td><?php echo escape($row["lastname"]); ?></td>
-            <td><?php echo escape($row["email"]); ?></td>
-            <td><?php echo escape($row["age"]); ?></td>
+            <!-- <td><?php //echo escape($row["email"]); ?></td>
+            <td><?php //echo escape($row["age"]); ?></td> -->
             <td><?php echo escape($row["location"]); ?></td>
             <td><?php echo escape($row["date"]); ?> </td>
             <td><a href="update-single.php?id=<?php echo escape($row["id"]); ?>">Edit</a></td>
