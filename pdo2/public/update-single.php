@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
       "lastname"  => $_POST['lastname'],
       // "email"     => $_POST['email'],
       // "age"       => $_POST['age'],
-      "location"  => $_POST['location']//,
+      "location"  => $_POST['location'] //,
       // "date"      => $_POST['date']
     ];
 
@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
               lastname = :lastname, 
               -- email = :email, 
               -- age = :age, 
-              location = :location, 
+              location = :location -- , 
               -- date = :date 
             WHERE id = :id";
 
